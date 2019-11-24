@@ -3,6 +3,10 @@ version = "1.0-SNAPSHOT"
 
 apply(plugin = "java-library")
 
+plugins {
+    groovy
+}
+
 repositories {
     mavenCentral()
 }
