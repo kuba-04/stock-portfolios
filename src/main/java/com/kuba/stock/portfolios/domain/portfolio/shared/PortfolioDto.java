@@ -1,4 +1,4 @@
-package com.kuba.stock.portfolios.domain.shared;
+package com.kuba.stock.portfolios.domain.portfolio.shared;
 
 import com.kuba.stock.portfolios.domain.portfolio.PortfolioId;
 import lombok.*;

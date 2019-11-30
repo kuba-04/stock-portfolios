@@ -1,7 +1,8 @@
 package com.kuba.stock.portfolios.domain.portfolio;
 
-import com.kuba.stock.portfolios.domain.shared.PortfolioDto;
-import java.util.*;
+import com.kuba.stock.portfolios.domain.portfolio.shared.PortfolioDto;
+import java.util.HashMap;
+import java.util.Map;
 
 public class Portfolio {
 
