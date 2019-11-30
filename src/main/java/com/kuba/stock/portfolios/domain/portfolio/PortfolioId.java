@@ -3,7 +3,7 @@ package com.kuba.stock.portfolios.domain.portfolio;
 import java.util.Objects;
 import java.util.UUID;
 
-class PortfolioId {
+public class PortfolioId {
 
     private final UUID id;
 

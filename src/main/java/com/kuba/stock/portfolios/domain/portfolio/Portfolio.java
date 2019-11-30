@@ -1,5 +1,6 @@
 package com.kuba.stock.portfolios.domain.portfolio;
 
+import com.kuba.stock.portfolios.domain.shared.PortfolioDto;
 import java.util.*;
 
 public class Portfolio {
@@ -55,5 +56,9 @@ public class Portfolio {
 
     boolean isOfUser(String userId) {
         return userId.equals(this.userId);
+    }
+
+    PortfolioDto toDto() {
+        return new PortfolioDto(id, userId, name, position, stocks);
     }
 }
