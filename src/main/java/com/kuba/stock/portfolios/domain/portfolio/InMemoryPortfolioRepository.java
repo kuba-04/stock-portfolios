@@ -24,4 +24,11 @@ public class InMemoryPortfolioRepository implements PortfolioRepository {
                 .filter(p -> p.isOfUser(userId))
                 .collect(Collectors.toList());
     }
+
+    @Override
+    public Optional<Portfolio> findById(PortfolioId id) {
+        return portfolios.values().stream()
+                .filter(p -> p.id() == id)
+                .findFirst();
+    }
 }
