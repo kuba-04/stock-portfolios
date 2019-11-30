@@ -13,4 +13,6 @@ repositories {
 
 dependencies {
     "testImplementation"("org.spockframework:spock-core:1.3-groovy-2.5")
+    "compile"("org.projectlombok:lombok:1.18.10")
+    "annotationProcessor"("org.projectlombok:lombok:1.18.4")
 }
