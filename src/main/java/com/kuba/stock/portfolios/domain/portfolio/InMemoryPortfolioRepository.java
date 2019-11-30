@@ -1,7 +1,7 @@
 package com.kuba.stock.portfolios.domain.portfolio;
 
 import java.util.*;
-import java.util.stream.Collectors;
+import java.util.stream.Stream;
 
 public class InMemoryPortfolioRepository implements PortfolioRepository {
 
@@ -19,10 +19,9 @@ public class InMemoryPortfolioRepository implements PortfolioRepository {
     }
 
     @Override
-    public List<Portfolio> findByUserId(String userId) {
+    public Stream<Portfolio> findByUserId(String userId) {
         return portfolios.values().stream()
-                .filter(p -> p.isOfUser(userId))
-                .collect(Collectors.toList());
+                .filter(p -> p.isOfUser(userId));
     }
 
     @Override

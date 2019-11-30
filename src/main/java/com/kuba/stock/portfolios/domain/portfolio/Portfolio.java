@@ -6,7 +6,7 @@ import java.util.Map;
 
 public class Portfolio {
 
-    private PortfolioId id;
+    private final PortfolioId id;
     private String userId;
     private String name;
     private int position;
