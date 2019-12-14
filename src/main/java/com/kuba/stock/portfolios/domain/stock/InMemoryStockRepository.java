@@ -9,7 +9,8 @@ public class InMemoryStockRepository implements StockRepository {
 
     @Override
     public Stock save(Stock stock) {
-        return stocks.put(stock.id(), stock);
+        stocks.put(stock.id(), stock);
+        return stock;
     }
 
     @Override
