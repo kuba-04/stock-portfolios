@@ -5,6 +5,7 @@ apply(plugin = "java-library")
 
 plugins {
     groovy
+    id("com.adarshr.test-logger") version "2.0.0"
 }
 
 repositories {
