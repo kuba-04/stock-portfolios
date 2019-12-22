@@ -7,7 +7,7 @@ public interface PortfolioRepository {
 
     Portfolio save(Portfolio portfolio);
 
-    void deleteById(PortfolioId id);
+    void deleteByUserIdAndId(String userId, PortfolioId id);
 
     Stream<Portfolio> findByUserId(String userId);
 
