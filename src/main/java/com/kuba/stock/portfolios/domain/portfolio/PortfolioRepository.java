@@ -13,4 +13,6 @@ public interface PortfolioRepository {
 
     Optional<Portfolio> findById(PortfolioId id);
 
+    Optional<Portfolio> findByUserIdAndName(String userId, String name);
+
 }

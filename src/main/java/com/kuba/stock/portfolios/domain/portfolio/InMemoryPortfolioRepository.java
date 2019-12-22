@@ -30,4 +30,11 @@ public class InMemoryPortfolioRepository implements PortfolioRepository {
                 .filter(p -> p.id() == id)
                 .findFirst();
     }
+
+    @Override
+    public Optional<Portfolio> findByUserIdAndName(String userId, String name) {
+        return portfolios.values().stream()
+                .filter(p -> p.isOfUser(userId) && p.getName().equals(name))
+                .findFirst();
+    }
 }
