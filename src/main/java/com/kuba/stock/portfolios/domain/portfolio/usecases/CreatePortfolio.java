@@ -1,5 +1,7 @@
-package com.kuba.stock.portfolios.domain.portfolio;
+package com.kuba.stock.portfolios.domain.portfolio.usecases;
 
+import com.kuba.stock.portfolios.domain.portfolio.Portfolio;
+import com.kuba.stock.portfolios.domain.portfolio.PortfolioRepository;
 import lombok.RequiredArgsConstructor;
 
 @RequiredArgsConstructor

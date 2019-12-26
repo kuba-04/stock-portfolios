@@ -1,14 +1,15 @@
-package com.kuba.stock.portfolios.domain.stock;
+package com.kuba.stock.portfolios.domain.stock.usecases;
 
+import com.kuba.stock.portfolios.domain.stock.*;
 import lombok.RequiredArgsConstructor;
 
 @RequiredArgsConstructor
-public class SaveStock {
+public class SaveNewStock {
 
     private final StockRepository stockRepository;
     private final RetrieveStock retrievalService;
 
-    Stock saveNew(String symbol) {
+    public Stock getNewAndSave(String symbol) {
         // stock already exists, handle that exception
         stockRepository.findById(new StockId(symbol))
                 .ifPresent(e -> {
@@ -17,5 +18,13 @@ public class SaveStock {
         // stock is new so go to IEX API to retrieve it and save
         Stock newStock = retrievalService.retrieve(symbol);
         return stockRepository.save(newStock);
+    }
+}
+
+class RetrieveStock {
+
+    //TODO implement with webclient
+    Stock retrieve(String symbol) {
+        return new Stock(symbol);
     }
 }

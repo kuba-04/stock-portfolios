@@ -1,6 +1,5 @@
 package com.kuba.stock.portfolios.domain.stock;
 
-import com.kuba.stock.portfolios.domain.stock.shared.StockDto;
 import lombok.Data;
 import java.math.BigDecimal;
 import java.math.RoundingMode;

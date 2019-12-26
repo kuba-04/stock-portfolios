@@ -1,6 +1,5 @@
-package com.kuba.stock.portfolios.domain.stock.shared;
+package com.kuba.stock.portfolios.domain.stock;
 
-import com.kuba.stock.portfolios.domain.stock.StockId;
 import lombok.*;
 import java.math.BigDecimal;
 

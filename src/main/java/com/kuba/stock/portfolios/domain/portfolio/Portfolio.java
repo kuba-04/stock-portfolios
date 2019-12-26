@@ -19,24 +19,28 @@ public class Portfolio {
         this.id = PortfolioId.newOne();
     }
 
-    static Portfolio create(String name, String userId) {
+    public static Portfolio create(String name, String userId) {
         return new Portfolio(name, userId);
     }
 
-    void updatePosition(int newPosition) {
+    Portfolio updatePosition(int newPosition) {
         position = newPosition;
+        return this;
     }
 
-    void applySorting(Map<String, Integer> sorting) {
+    Portfolio applySorting(Map<String, Integer> sorting) {
         stocks.putAll(sorting);
+        return this;
     }
 
-    void addStock(String stockId) {
+    public Portfolio addStock(String stockId) {
         stocks.put(stockId, stocks.size());
+        return this;
     }
 
-    void deleteStock(String stockId) {
+    Portfolio deleteStock(String stockId) {
         stocks.remove(stockId);
+        return this;
     }
 
     String getName() {
@@ -51,7 +55,7 @@ public class Portfolio {
         return stocks;
     }
 
-    PortfolioId id() {
+    public PortfolioId id() {
         return this.id;
     }
 
