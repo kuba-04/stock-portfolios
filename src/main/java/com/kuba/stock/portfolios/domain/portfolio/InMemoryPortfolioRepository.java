@@ -16,7 +16,6 @@ public class InMemoryPortfolioRepository implements PortfolioRepository {
     @Override
     public void deleteByUserIdAndId(String userId, PortfolioId id) {
         portfolios.values().removeIf(p -> p.isOfUser(userId) && p.id().equals(id));
-
     }
 
     @Override

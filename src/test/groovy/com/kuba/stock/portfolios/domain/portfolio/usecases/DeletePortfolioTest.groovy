@@ -1,6 +1,7 @@
-package com.kuba.stock.portfolios.domain.portfolio
+package com.kuba.stock.portfolios.domain.portfolio.usecases
 
-import com.kuba.stock.portfolios.domain.portfolio.usecases.DeletePortfolio
+import com.kuba.stock.portfolios.domain.portfolio.InMemoryPortfolioRepository
+import com.kuba.stock.portfolios.domain.portfolio.Portfolio
 import spock.lang.Specification
 
 class DeletePortfolioTest extends Specification {

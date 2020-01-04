@@ -1,6 +1,6 @@
-package com.kuba.stock.portfolios.domain.portfolio
+package com.kuba.stock.portfolios.domain.portfolio.usecases
 
-import com.kuba.stock.portfolios.domain.portfolio.usecases.CreatePortfolio
+import com.kuba.stock.portfolios.domain.portfolio.InMemoryPortfolioRepository
 import spock.lang.Specification
 
 class CreatePortfolioTest extends Specification {

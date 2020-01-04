@@ -1,12 +1,13 @@
-package com.kuba.stock.portfolios.domain.portfolio
+package com.kuba.stock.portfolios.domain.portfolio.usecases
 
 import static com.kuba.stock.portfolios.domain.commons.Result.SUCCESS
 import com.kuba.stock.portfolios.domain.commons.publisher.SaveAndForwardEventPublisher
 import com.kuba.stock.portfolios.domain.commons.storage.InMemoryEventStorage
-import com.kuba.stock.portfolios.domain.portfolio.usecases.AddStockToPortfolio
+import com.kuba.stock.portfolios.domain.portfolio.InMemoryPortfolioRepository
+import com.kuba.stock.portfolios.domain.portfolio.Portfolio
+import com.kuba.stock.portfolios.domain.stock.AddStockToPortfolioEventHandler
 import com.kuba.stock.portfolios.domain.stock.InMemoryStockRepository
 import com.kuba.stock.portfolios.domain.stock.StockId
-import com.kuba.stock.portfolios.domain.stock.AddStockToPortfolioEventHandler
 import com.kuba.stock.portfolios.domain.stock.usecases.RetrieveStock
 import com.kuba.stock.portfolios.domain.stock.usecases.SaveNewStock
 import spock.lang.Specification
