@@ -14,7 +14,8 @@ public class CreatePortfolio {
                 .ifPresent(e -> {
                     throw new IllegalArgumentException("Portfolio " + portfolioName + " already exists for user " + userId);
                 });
-        Portfolio newPortfolio = Portfolio.create(portfolioName, userId);
+        Portfolio newPortfolio = Portfolio.create(portfolioName, userId)
+                .updatePosition((int) portfolioRepository.findByUserId(userId).count());
         return portfolioRepository.save(newPortfolio);
     }
 }

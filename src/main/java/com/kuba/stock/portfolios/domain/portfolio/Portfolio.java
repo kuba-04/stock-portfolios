@@ -23,7 +23,7 @@ public class Portfolio {
         return new Portfolio(name, userId);
     }
 
-    Portfolio updatePosition(int newPosition) {
+    public Portfolio updatePosition(int newPosition) {
         position = newPosition;
         return this;
     }
@@ -43,11 +43,11 @@ public class Portfolio {
         return this;
     }
 
-    String getName() {
+    public String getName() {
         return name;
     }
 
-    int getPosition() {
+    public int getPosition() {
         return position;
     }
 
