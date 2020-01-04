@@ -38,7 +38,7 @@ public class Portfolio {
         return this;
     }
 
-    Portfolio deleteStock(String stockId) {
+    public Portfolio deleteStock(String stockId) {
         stocks.remove(stockId);
         return this;
     }
@@ -51,7 +51,7 @@ public class Portfolio {
         return position;
     }
 
-    Map<String, Integer> getStocks() {
+    public Map<String, Integer> getStocks() {
         return stocks;
     }
 
