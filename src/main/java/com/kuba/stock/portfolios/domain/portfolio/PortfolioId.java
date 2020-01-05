@@ -10,7 +10,7 @@ public class PortfolioId {
 
     private final UUID id;
 
-    public static PortfolioId newOne() {
+    static PortfolioId newOne() {
         return new PortfolioId(UUID.randomUUID());
     }
 

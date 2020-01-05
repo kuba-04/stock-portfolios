@@ -1,23 +1,25 @@
 package com.kuba.stock.portfolios.domain.stock
 
+import com.kuba.stock.portfolios.domain.stock.usecases.RetrieveStock
+import com.kuba.stock.portfolios.domain.stock.usecases.SaveNewStock
 import spock.lang.Specification
 import spock.lang.Subject
 
-class SaveStockTest extends Specification {
+class SaveNewStockTest extends Specification {
 
     def repository = new InMemoryStockRepository()
     def retrieveStock = new RetrieveStock()
 
     @Subject
-    def saveStock = new SaveStock(repository, retrieveStock)
+    def saveNewStock = new SaveNewStock(repository, retrieveStock)
 
 
-    def "should save new stock if not present already"() {
+    def "should add new stock if not present already"() {
         given:
         def symbol = "XOM"
 
         when:
-        def savedStock = saveStock.saveNew(symbol)
+        def savedStock = saveNewStock.getNewAndSave(symbol)
 
         then:
         Optional<Stock> addedStock = repository.findById(savedStock.id())
@@ -25,15 +27,15 @@ class SaveStockTest extends Specification {
         addedStock.get().id() == new StockId(symbol)
     }
 
-    def "should not save new stock if already exists"() {
+    def "should not add new stock if already exists"() {
         given:
         def symbol = "XOM"
 
         and:
-        saveStock.saveNew(symbol)
+        saveNewStock.getNewAndSave(symbol)
 
         when:
-        saveStock.saveNew(symbol)
+        saveNewStock.getNewAndSave(symbol)
 
         then:
         def e = thrown(IllegalArgumentException)

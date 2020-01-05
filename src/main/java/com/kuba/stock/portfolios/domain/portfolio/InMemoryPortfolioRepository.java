@@ -14,8 +14,8 @@ public class InMemoryPortfolioRepository implements PortfolioRepository {
     }
 
     @Override
-    public void deleteById(PortfolioId id) {
-        portfolios.remove(id);
+    public void deleteByUserIdAndId(String userId, PortfolioId id) {
+        portfolios.values().removeIf(p -> p.isOfUser(userId) && p.id().equals(id));
     }
 
     @Override
@@ -28,6 +28,13 @@ public class InMemoryPortfolioRepository implements PortfolioRepository {
     public Optional<Portfolio> findById(PortfolioId id) {
         return portfolios.values().stream()
                 .filter(p -> p.id() == id)
+                .findFirst();
+    }
+
+    @Override
+    public Optional<Portfolio> findByUserIdAndName(String userId, String name) {
+        return portfolios.values().stream()
+                .filter(p -> p.isOfUser(userId) && p.getName().equals(name))
                 .findFirst();
     }
 }
