@@ -1,13 +1,13 @@
-package com.kuba.stock.portfolios.domain.stock;
+package com.kuba.stock.portfolios.domain.sorting;
 
+import com.kuba.stock.portfolios.domain.stock.StockId;
 import lombok.*;
 import java.math.BigDecimal;
 
 @NoArgsConstructor
 @AllArgsConstructor
 @Getter
-@EqualsAndHashCode
-public class StockDto {
+public class SortedStockDto {
 
     private StockId id;
     private BigDecimal employees;
@@ -24,4 +24,5 @@ public class StockDto {
     private String industry;
     private String sector;
     private String description;
+    private String sortOrder;
 }

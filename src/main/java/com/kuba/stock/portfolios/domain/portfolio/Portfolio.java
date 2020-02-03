@@ -1,9 +1,11 @@
 package com.kuba.stock.portfolios.domain.portfolio;
 
 import com.kuba.stock.portfolios.domain.portfolio.shared.PortfolioDto;
+import lombok.EqualsAndHashCode;
 import java.util.HashMap;
 import java.util.Map;
 
+@EqualsAndHashCode
 public class Portfolio {
 
     private final PortfolioId id;
@@ -59,8 +61,8 @@ public class Portfolio {
         return this.id;
     }
 
-    boolean isOfUser(String userId) {
-        return userId.equals(this.userId);
+    public String getUserId() {
+        return this.userId;
     }
 
     PortfolioDto toDto() {

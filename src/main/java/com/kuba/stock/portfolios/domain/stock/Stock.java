@@ -54,49 +54,49 @@ public class Stock {
         return id;
     }
 
-    void updateEmployees(BigDecimal newEmployees) {
+    public void updateEmployees(BigDecimal newEmployees) {
         employees = newEmployees;
         updateMarketCapPerEmployee();
     }
 
-    void updateSharesOutstanding(BigDecimal newSharesOutstanding) {
+    public void updateSharesOutstanding(BigDecimal newSharesOutstanding) {
         sharesOutstanding = newSharesOutstanding;
     }
 
-    void updateDividendYield(BigDecimal newDividendYield) {
+    public void updateDividendYield(BigDecimal newDividendYield) {
         dividendYield = newDividendYield;
     }
 
-    void updateActualEPS(BigDecimal newActualEPS) {
+    public void updateActualEPS(BigDecimal newActualEPS) {
         actualEPS = newActualEPS;
     }
 
-    void updateLatestPrice(BigDecimal newLatestPrice) {
+    public void updateLatestPrice(BigDecimal newLatestPrice) {
         latestPrice = newLatestPrice;
     }
 
-    void updateMarketCap(BigDecimal newMarketCap) {
+    public void updateMarketCap(BigDecimal newMarketCap) {
         marketCap = newMarketCap;
         updateMarketCapPerEmployee();
     }
 
-    void updatePeRatio(BigDecimal newPeRatio) {
+    public void updatePeRatio(BigDecimal newPeRatio) {
         peRatio = newPeRatio;
     }
 
-    void updateWeek52High(BigDecimal newWeek52High) {
+    public void updateWeek52High(BigDecimal newWeek52High) {
         week52High = newWeek52High;
     }
 
-    void updateWeek52low(BigDecimal newWeek52low) {
+    public void updateWeek52low(BigDecimal newWeek52low) {
         week52Low = newWeek52low;
     }
 
-    void updateCompany(Company newCompany) {
+    public void updateCompany(Company newCompany) {
         company = newCompany;
     }
 
-    StockDto toDto() {
+    public StockDto toDto() {
         return new StockDto(
                 id, employees, sharesOutstanding, dividendYield, actualEPS,
                 latestPrice, marketCap, peRatio, week52High, week52Low, marketCapPerEmployee,

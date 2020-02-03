@@ -33,4 +33,28 @@ public class NormalizedStockDto {
     private String industry;
     private String sector;
     private String description;
+    private double sortingCoefficient;
+
+    public void setSortingCoefficient(double sortingCoefficient) {
+        this.sortingCoefficient = sortingCoefficient;
+    }
+
+    public StockDto toDto() {
+        return new StockDto(
+                id,
+                employees,
+                sharesOutstanding,
+                dividendYield,
+                actualEPS,
+                latestPrice,
+                marketCap,
+                peRatio,
+                week52High,
+                week52Low,
+                marketCapPerEmployee,
+                companyName,
+                industry,
+                sector,
+                description);
+    }
 }

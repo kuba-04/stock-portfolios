@@ -1,10 +1,10 @@
 package com.kuba.stock.portfolios.domain.portfolio;
 
-import lombok.*;
+import lombok.AllArgsConstructor;
+import lombok.EqualsAndHashCode;
 import java.util.UUID;
 
 @EqualsAndHashCode
-@ToString
 @AllArgsConstructor
 public class PortfolioId {
 
@@ -18,4 +18,8 @@ public class PortfolioId {
         return id;
     }
 
+    @Override
+    public String toString() {
+        return id.toString();
+    }
 }

@@ -33,7 +33,7 @@ public class PortfolioNormalizer {
         return new NormalizedStockDto(stock.getId(), stock.getEmployees(), stock.getSharesOutstanding(), stock.getDividendYield(),
                 stock.getActualEPS(), stock.getLatestPrice(), stock.getMarketCap(), stock.getPeRatio(), stock.getWeek52High(),
                 stock.getWeek52Low(), stock.getMarketCapPerEmployee(), nPeRatio, nActualEPS, nMarketCapToEmployees,
-                stock.getCompanyName(), stock.getIndustry(), stock.getSector(), stock.getDescription());
+                stock.getCompanyName(), stock.getIndustry(), stock.getSector(), stock.getDescription(), 0);
     }
 
     private BigDecimal getNormalizedValue(List<StockDto> stocks, StockDto stock, Parameter param) {
